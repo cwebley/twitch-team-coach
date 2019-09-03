@@ -1,0 +1,163 @@
+GET https://id.twitch.tv/oauth2/authorize?client_id=k8e4v0o7azh4mfi237h8flfcq48hax&redirect_uri=http://localhost:3001&response_type=token
+
+curl -H 'Client-ID: k8e4v0o7azh4mfi237h8flfcq48hax' \
+-X GET 'https://api.twitch.tv/helix/streams?user_login=str8out'
+
+curl -H 'Authorization: Bearer 9jo0jknymqfe1ij5v2y5l2fjvsonv6' \
+-X GET 'https://api.twitch.tv/helix/users?login=str8outthebook'
+
+http://localhost:3001/#access_token=9jo0jknymqfe1ij5v2y5l2fjvsonv6&scope=&token_type=bearer
+
+&scope=<space-separated list of scopes>
+
+GET https://id.twitch.tv/oauth2/authorize\
+?client_id=k8e4v0o7azh4mfi237h8flfcq48hax\
+&redirect_uri=http://localhost:3001\
+&response_type=token
+&scope=<space-separated list of scopes>
+
+
+
+
+curl -H 'Authorization: Bearer 9jo0jknymqfe1ij5v2y5l2fjvsonv6' \
+-X GET 'https://api.twitch.tv/helix/users?login=str8outthebook'
+
+curl -H 'Client-ID: k8e4v0o7azh4mfi237h8flfcq48hax' \
+-X GET 'https://api.twitch.tv/helix/videos?user_id=55125740'
+
+
+
+
+str8outthebook
+https://www.twitch.tv/videos/345599558
+
+zombiefilledmall
+https://www.twitch.tv/videos/345611139
+
+ch3ckmate313
+https://www.twitch.tv/videos/345643341
+
+ttmchamp
+https://www.twitch.tv/videos/345635646
+120 +
+
+
+ttm members defaulted
+archives pulled for each
+select each archive you want to play
+enter timestamps
+hit a sync button to save that offset
+
+one big play button
+one big rewind button etc
+a small sync button next to each player
+
+Player Component
+props
+  channel (implies stream is live and overrides `video`)
+  videoId
+  timestamp
+  play
+  pause
+
+
+/vid/vid/vid/vid
+or
+?v1=vid&t1=1h1m1s&v2=vid&t2=1h1m1s&sy
+
+https://reacttraining.com/react-router/web/example/modal-gallery
+use modals to select a particular vod from a user
+
+sync button
+goes on each player
+given the timestamps in the links for the OTHER players and assuming they're synced
+it brings them to the current moment on this player
+
+create link button or snapshot button
+calls player.getCurrentTime() on each player
+each func returns the time
+returns a query string
+maybe its even a react-router Link
+<Link to={{ pathname: "/account", search: "?name=netflix" }}>
+
+seek buttons?
+skip 10s
+skip 1m
+skip 10m
+skip 1h
+
+support for clips
+add a clip button that captures a chunk of time on all 4 streams
+then it waits and hits getClips() after 15s returning a new link to the /clips endpoint
+
+Seek input form with hms parsing
+Keyboard shortcuts
+  spacebar to play/pause
+  s to focus seek form or something
+  l to create a link
+Support for live
+  with a button to link the archive page
+Clip support
+  for live and archive
+Host it somewhere
+
+http://localhost:3001/?v1=399673240&t1=172.15&v2=399617853&t2=6641.64&v3=399644070&t3=3564.79&v4=399629622&t4=5174.46
+
+seek dont always skip forward, but instead skip based on the starttime
+
+keyboard shorcuts for backing up a clip 10s, space bar to play/pause etc
+fix seek logic for hms and no hms etc
+when seeking hit play then pause and make sure the vid is properly buffered
+dvr and sync buttons sucks, that ui should be better
+localStorage to save old links for next day gchats and stuff.
+
+
+random sync time
+http://34.66.229.25/archive?v1=408280089&t1=836.55&v2=408277404&t2=1141.45&v3=408275506&t3=1404.45
+
+palms g late chan selfless mike loots
+http://34.66.229.25/archive?v1=408280089&t1=6613.96&v2=408277404&t2=6915.96&v3=408275506&t3=7172.93
+
+summer homes fight where chan rogues but blames teammates
+http://34.66.229.25/archive?v1=408280089&t1=4182.02&v2=408277404&t2=4489.00&v3=408275506&t3=4742.41
+
+
+tilted fight chan not useful position
+http://34.66.229.25/archive?v1=411686861&t1=14726.75&v2=411723549&t2=9667.04&v3=411727422&t3=9315.73
+little later
+http://34.66.229.25/archive?v1=411686861&t1=14773.14&v2=411723549&t2=9714.17&v3=411727422&t3=9362.11
+post reboot
+http://34.66.229.25/archive?v1=411686861&t1=14832.89&v2=411723549&t2=9773.88&v3=411727422&t3=9421.84
+
+TODO: query params to mute/ unmute certain streams
+fix layout on small screens, bj says vids are too small
+remove a vid from query params for shareable moments
+
+chan/moo synced 4/18 but chan does nothing then dies thirsting
+
+chan polar play doesnt keep up, bad positioning
+http://34.66.229.25/archive?v1=415064091&t1=13533.49&v2=415080811&t2=11224.18
+
+http://34.66.229.25/archive?v1=421415426&t1=16667.58&v2=421414229&t2=16848.53
+salty blue house chan disappears
+
+
+http://34.66.229.25/archive?v1=421415426&t1=12571.44&v2=421414229&t2=12754.10&v3=421396474&t3=15584.44
+http://34.66.229.25/archive?v1=421415426&t1=16667.58&v2=421414229&t2=16848.53
+salty blue house chan disappears
+
+draw speeds
+shotguns: 0.5s
+tac ar 0.3s
+dualies 0.55s
+other ars: 0.333s
+handcannon: 0.533s 1.25s rof
+silent smg: 0.33s
+
+things i need to do:
+watch people through builds in fights, watch through walls during edit plays etc
+blueprint cancel door animations
+build fights: recognize the retake attempt, get 2 above and floor pyramid next to the 180 for a shot
+
+ttm squad wiped at fatal
+http://34.66.229.25/archive?v1=435024789&t1=2510.18&v2=435028687&t2=1876.75&v3=435026888&t3=2169.04&v4=435024844&t4=2500.00
