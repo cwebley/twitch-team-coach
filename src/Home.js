@@ -54,7 +54,7 @@ function Home({ history, location, classes }) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Typography variant="h5" paragraph>
-          Welcome. Enter channel names below separated by comma and space.
+          Enter channel names below separated by comma and space.
         </Typography>
       </Paper>
       <form className={classes.form} onSubmit={onSubmit}>
